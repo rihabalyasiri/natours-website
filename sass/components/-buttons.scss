@@ -1,0 +1,128 @@
+.btn {
+    
+&,   
+&:link,
+&:visited {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 1.5rem 4rem;
+    display: inline-block;
+    border-radius: 20rem;
+    transition: all .2s;
+    position: relative;
+    font-size: $default-font-size;
+    color:$color-dark-gray;
+    
+    border: none;
+    cursor: pointer;
+   
+  
+}
+&:hover{
+    
+    transform: translateY(-.3rem);
+    box-shadow: 0rem 1rem 2rem rgba($color-black,.2);
+}
+&:active,
+&:focus {
+    outline: none;
+    transform: translateY(-.1rem);
+     box-shadow: 0rem .5rem 1rem rgba($color-black,.2);
+}
+&-white {
+    color:$color-white;
+    background-color: $color-white;
+    
+    &::after {
+    background-color:$color-white;
+    }
+}
+    
+ &-green {
+    background-color: $color-dark-green;
+      color:$color-white !important;
+     
+    
+    &::after {
+    background-color:$color-dark-green;
+       
+
+    }
+}
+&::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 20rem;
+    z-index: -1;
+    transition: all .4s;
+}
+ 
+&:hover::after {
+    transform: scale(2);
+    opacity: 0;
+}
+&-animated {
+     animation-name:moveToUp;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-delay: .75s;
+    animation-fill-mode: backwards;
+}
+
+
+
+}
+
+
+.btn-text {
+    
+    &:link,&:visited {
+        color: $color-medium-green;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-medium-green;
+        padding: 3px;
+        font-size: $default-font-size;
+        transition: all .2s;
+        
+    }
+    
+    &:hover{
+        color: $color-white;
+        background-color: $color-medium-green;
+        box-shadow: 0 1rem 2rem rgba($color-black,.15);
+        transform: translateY(-2px);
+    }
+    
+    &:active {
+        box-shadow: 0 1rem 2rem rgba($color-black,.15);
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
